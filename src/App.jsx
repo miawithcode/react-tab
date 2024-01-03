@@ -7,6 +7,7 @@ const url = 'https://course-api.com/react-tabs-project';
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [jobs, setJobs] = useState([]);
+  const [currentJob, setCurrentJob] = useState(0);
 
   const fetchJobs = async () => {
     const response = await fetch(url);
@@ -28,10 +29,10 @@ const App = () => {
   return (
     <section>
       {/* button container */}
-      <ButtonContainer jobs={jobs}/>
+      <ButtonContainer jobs={jobs} currentJob={currentJob} setCurrentJob={setCurrentJob} />
 
       {/* job info */}
-      <JobInfo jobs={jobs} />
+      <JobInfo jobs={jobs} currentJob={currentJob} />
     </section>
   );
 }
