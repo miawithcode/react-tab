@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import JobInfo from "./JobInfo";
+import JobInfo from "./components/JobInfo";
 
 const url = 'https://course-api.com/react-tabs-project';
 
