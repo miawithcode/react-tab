@@ -7,8 +7,8 @@ const Duties = ({ duties }) => {
       {duties.map((duty) => {
         const id = uuidv4();
         return (
-          <div key={id}>
-            <MdKeyboardDoubleArrowRight />
+          <div key={id} className="job-desc">
+            <MdKeyboardDoubleArrowRight className='job-icon' />
             <p>{duty}</p>
           </div>
         );

@@ -1,3 +1,87 @@
-.active {
-  background-color: cornflowerblue;
+section {
+  width: 80vw;
+  margin: 5rem auto;
+  max-width: 1120px;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+
+.job-btn {
+  background-color: transparent;
+  border-color: transparent;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.job-btn:hover {
+  color: cornflowerblue;
+  box-shadow: 0 2px cornflowerblue;
+}
+
+.job-btn.active {
+  color: cornflowerblue;
+  box-shadow: 0 2px cornflowerblue;
+}
+
+span {
+  text-transform: uppercase;
+  color: gray;
+  background-color: rgba(128, 128, 128, 0.2);
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  border-radius: 3px;
+  margin: 0.75rem 0;
+}
+
+.job-date {
+  color: rgba(128, 128, 128, 0.8);
+  letter-spacing: 1.5px;
+  /* margin-bottom: 2rem; */
+}
+
+.job-desc {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 2rem;
+  align-items: center;
+}
+
+.job-icon {
+  color: cornflowerblue;
+  font-size: 1.2rem;
+}
+
+.job-desc p {
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 992px) {
+  section {
+    width: 90vw;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    column-gap: 4rem;
+  }
+  .btn-container{
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .job-btn {
+    margin-bottom: 1rem;
+  }
+  .job-btn:hover {
+    box-shadow: -2px 0 cornflowerblue;
+  }
+  .job-btn.active {
+    box-shadow: -2px 0 cornflowerblue;
+  }
 }
